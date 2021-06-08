@@ -304,7 +304,7 @@ body {
 
 1.  `<form class="search-form" id="search-form">`
 2.  `<ul class="search-results" id="search-results"></ul>`
-3.  `<ul class="coutries-list" id="coutries-list"></ul>`
+3.  `<ul class="countries-list" id="countries-list"></ul>`
 4.  `<div class="modal is-hidden" id="modal">`
 5.  `<div class="modal-content" id="modal-content"></div>`
 
