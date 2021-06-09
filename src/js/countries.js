@@ -1,4 +1,3 @@
-
 // импортируем объект доступов из файла refs.js
 import refs from "./refs.js";
 // деструктуризируем свойства объекта доступов,
@@ -47,19 +46,25 @@ let base_url = `https://restcountries.eu/rest/v2/`;
 // создаем функцию запроса всех стран для вывода общего списка
 function getAllCountries() {
   let all_point = `all`;
-  fetch(base_url + all_point)
+  return fetch(base_url + all_point)
     .then((response) => {
       return response.json();
     })
     .then((data) => {
       const items = countriesListItem(data);
       coutriesList.insertAdjacentHTML("afterbegin", items);
+
       const countries = [...coutriesList.children];
-      countries.forEach((country) => {
-        country.addEventListener("click", (event) => {
-          let name = event.target.textContent.trim();
+
+      return countries.forEach((country) => {
+
+        return country.addEventListener("click", (event) => {
+
+          console.log("countryName", event.currentTarget.textContent);
+          
+          let name = event.currentTarget.textContent.trim();
           let country_point = `name/${name}`;
-          fetch(base_url + country_point)
+          return fetch(base_url + country_point)
             .then((response) => {
               return response.json();
             })
