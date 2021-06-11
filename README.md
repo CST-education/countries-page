@@ -133,7 +133,7 @@
       </section>
       <section class="all-countries-section" id="all">
         <h2>All Countries</h2>
-        <ul class="coutries-list" id="coutries-list"></ul>
+        <ul class="countries-list" id="countries-list"></ul>
       </section>
       <div class="modal is-hidden" id="modal">
         <div class="modal-content" id="modal-content"></div>
@@ -256,14 +256,14 @@ body {
   text-transform: uppercase;
   font-size: 5rem;
 }
-.coutries-list {
+.countries-list {
   display: flex;
   flex-flow: row wrap;
   padding: 100px;
   justify-content: center;
   cursor: pointer;
 }
-.coutries-list li {
+.countries-list li {
   display: flex;
   align-items: center;
   padding: 20px;
@@ -272,7 +272,7 @@ body {
   min-width: 300px;
   width: 40%;
 }
-.coutries-list li img {
+.countries-list li img {
   margin-right: 20px;
 }
 .modal-item {
