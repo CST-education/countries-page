@@ -35,7 +35,7 @@ window.addEventListener("keydown", (e) => {
 // закрываем модальное окно по клику за пределами карточки
 modal.addEventListener("click", (e) => {
   //   console.log(e.target);
-  if (e.target.id !== "content-modal") {
+  if (e.target.id !== "modal-content") {
     modal.classList.add("is-hidden");
     modalContent.innerHTML = "";
   }
@@ -54,7 +54,7 @@ function getAllCountries() {
       const items = countriesListItem(data);
       coutriesList.insertAdjacentHTML("afterbegin", items);
 
-      const countries = [...coutriesList.children];
+      const countries = [...countriesList.children];
 
       return countries.forEach((country) => {
 
